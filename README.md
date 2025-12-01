@@ -1,6 +1,32 @@
-# Gitlab CI to GitHub Action migration demo. 
+# Gitlab CI to GitHub Action migration demo
 
-Ona Prompt: 
+## Setup
+
+### GitHub Authentication
+
+This project requires a valid GitHub Personal Access Token to interact with GitHub.
+
+1. Create a GitHub Personal Access Token:
+   - Go to [https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
+   - Set a note like: "Gitpod GitLab CI Migration"
+   - Select scopes:
+     - `repo` (all)
+     - `workflow`
+     - `admin:org` (read:org)
+   - Click "Generate token"
+   - Copy the token
+
+2. Configure the token:
+   ```bash
+   ./setup-github-auth.sh <your_token_here>
+   ```
+
+3. Persist the token (optional, for workspace restarts):
+   ```bash
+   gp env ONA_GITHUB=<your_token_here>
+   ```
+
+## Ona Prompt 
 ```
 I want to migrate a GitLab CI pipeline to GitHub. 
 
