@@ -38,3 +38,4 @@ Migration instructions:
 If the Gitlab Job's purpose is to make preparations for dependent jobs, make it a GitHub Action "step".
 Otherwise, make it a GitHub Action "Job".
 ```
+
